@@ -2,8 +2,8 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "gamaliel",
   "title": "Bible Q&A",
-  "description": "Ask biblical questions and read answers with scripture links that open in Gamaliel.",
-  "icon": "icon.png",
+  "description": "Ask a biblical question. Gamaliel reads the relevant passages first, then answers with scripture links.",
+  "icon": "gamaliel-logo.png",
   "author": "cirne",
   "categories": ["Productivity", "Web"],
   "license": "MIT",
@@ -22,6 +22,7 @@
       "title": "Bible Q&A",
       "subtitle": "Gamaliel",
       "description": "Ask a question and get a biblical answer with scripture links.",
+      "icon": "gamaliel-logo.png",
       "mode": "view"
     }
   ],
@@ -66,7 +67,7 @@
       "name": "bibleId",
       "type": "dropdown",
       "title": "Bible Translation",
-      "description": "Translation used for scripture in answers. Preference dropdowns cannot be grouped by language; the search bar dropdown is.",
+      "description": "Translation used for scripture in answers.",
       "required": false,
       "default": "eng-us-niv",
       "data": [

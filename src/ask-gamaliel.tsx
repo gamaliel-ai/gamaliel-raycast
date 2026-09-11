@@ -125,12 +125,16 @@ export default function Command() {
 
   const actions = (
     <ActionPanel>
-      {citations[0] ? <Action.OpenInBrowser title={`Open ${citations[0].label}`} url={citations[0].url} /> : null}
-      <Action.OpenInBrowser title="Open Gamaliel" url={GAMALIEL_ORIGIN} />
-      {answer && !error ? (
-        <Action.CopyToClipboard title="Copy Answer" content={absolutizeScriptureLinks(answer)} />
+      {citations[0] ? (
+        <Action.OpenInBrowser title={`Open ${citations[0].label}`} icon={Icon.Book} url={citations[0].url} />
       ) : null}
-      {currentQuestion ? <Action.CopyToClipboard title="Copy Question" content={currentQuestion} /> : null}
+      <Action.OpenInBrowser title="Open Gamaliel" icon={{ source: "gamaliel-logo.png" }} url={GAMALIEL_ORIGIN} />
+      {answer && !error ? (
+        <Action.CopyToClipboard title="Copy Answer" icon={Icon.Clipboard} content={absolutizeScriptureLinks(answer)} />
+      ) : null}
+      {currentQuestion ? (
+        <Action.CopyToClipboard title="Copy Question" icon={Icon.Text} content={currentQuestion} />
+      ) : null}
       <Action title="Ask Another Question" icon={Icon.MagnifyingGlass} onAction={askAnotherQuestion} />
       <Action
         title="New Conversation"
@@ -175,6 +179,7 @@ export default function Command() {
       }
     >
       <List.EmptyView
+        icon={{ source: "gamaliel-logo.png" }}
         title="Bible Q&A"
         description="Ask any question, get a biblical answer"
         actions={
