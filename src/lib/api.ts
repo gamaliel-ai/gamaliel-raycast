@@ -19,7 +19,7 @@ export async function streamAnswer(
   onUpdate: (markdown: string) => void,
 ): Promise<string> {
   if (countUserMessages(messages) > MAX_USER_MESSAGES) {
-    throw new Error("This conversation reached Gamaliel’s 20-question limit. Start a new Ask Gamaliel command.");
+    throw new Error("This conversation reached Gamaliel’s 20-question limit. Start a new conversation.");
   }
 
   const headers: Record<string, string> = {
@@ -124,7 +124,7 @@ async function readApiError(response: Response): Promise<string> {
       return "Gamaliel hosted access is rate-limited (3 requests/minute/IP). Wait a minute and try again.";
     }
     if (body.error?.code === "conversation_limit_exceeded") {
-      return "This conversation reached Gamaliel’s 20-question limit. Start a new Ask Gamaliel command.";
+      return "This conversation reached Gamaliel’s 20-question limit. Start a new conversation.";
     }
     if (message) {
       return message;

@@ -175,11 +175,11 @@ export default function Command() {
       }
     >
       <List.EmptyView
-        title="Ask Gamaliel"
+        title="Bible Q&A"
         description="Ask any question, get a biblical answer"
         actions={
           <ActionPanel>
-            <Action title="Ask Gamaliel" icon={Icon.MagnifyingGlass} onAction={() => submit(query)} />
+            <Action title="Ask" icon={Icon.MagnifyingGlass} onAction={() => submit(query)} />
           </ActionPanel>
         }
       />

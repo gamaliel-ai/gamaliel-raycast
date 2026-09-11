@@ -1,7 +1,7 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "gamaliel",
-  "title": "Gamaliel",
+  "title": "Bible Q&A",
   "description": "Ask biblical questions and read answers with scripture links that open in Gamaliel.",
   "icon": "icon.png",
   "author": "cirne",
@@ -19,8 +19,8 @@
   "commands": [
     {
       "name": "ask-gamaliel",
-      "title": "Ask Gamaliel",
-      "subtitle": "Biblical Q&A",
+      "title": "Bible Q&A",
+      "subtitle": "Gamaliel",
       "description": "Ask a question and get a biblical answer with scripture links.",
       "mode": "view"
     }
@@ -66,7 +66,7 @@
       "name": "bibleId",
       "type": "dropdown",
       "title": "Bible Translation",
-      "description": "Translation used for scripture in answers. Preference dropdowns cannot be grouped by language; the Ask Gamaliel search bar dropdown is.",
+      "description": "Translation used for scripture in answers. Preference dropdowns cannot be grouped by language; the search bar dropdown is.",
       "required": false,
       "default": "eng-us-niv",
       "data": [
